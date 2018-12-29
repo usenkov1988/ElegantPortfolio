@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="portfolioDB" Class="LinqToDBDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=D:\Programming\Projects\ElegantPortfolio\portfolioDB\portfolioDB.mdf;Integrated Security=True;Connect Timeout=30" SettingsObjectName="WindowsFormsApp1.Properties.Settings" SettingsPropertyName="portfolioDBConnectionString1" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.covariations" Member="covariations">
+    <Type Name="covariations">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ticker_A" Type="System.String" DbType="VarChar(128)" CanBeNull="true" />
+      <Column Name="ticker_B" Type="System.String" DbType="VarChar(128)" CanBeNull="true" />
+      <Column Name="value" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="period" Type="System.String" DbType="VarChar(16)" CanBeNull="true" />
+      <Column Name="date" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="time" Type="System.TimeSpan" DbType="Time" CanBeNull="true" />
+      <Column Name="period_analize" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.rates" Member="rates">
+    <Type Name="rates">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ticker" Type="System.String" DbType="VarChar(128)" CanBeNull="true" />
+      <Column Name="period" Type="System.String" DbType="VarChar(16)" CanBeNull="true" />
+      <Column Name="date" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="time" Type="System.TimeSpan" DbType="Time" CanBeNull="true" />
+      <Column Name="[open]" Member="open" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="high" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="low" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="[close]" Member="close" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="volume" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="[_profitable]" Member="_profitable" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="[_profitable_by_period]" Member="_profitable_by_period" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="[_risk_by_period]" Member="_risk_by_period" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="[_x]" Member="_x" Type="System.Double" DbType="Float" CanBeNull="true" />
+    </Type>
+  </Table>
+</Database>
